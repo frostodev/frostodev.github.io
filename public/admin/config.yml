@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: frostodev/frostodev.github.io
+  branch: main
+  base_url: https://decap-oauth-proxy.sergio-carcamo2023.workers.dev/
+
+local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Artículos del Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción corta", name: "description", widget: "text", required: false }
+      - { label: "Fecha", name: "pubDate", widget: "datetime" }
+      - { label: "Etiquetas", name: "tags", widget: "list", default: ["SIGESA"] }
+      - { label: "Cuerpo del post", name: "body", widget: "markdown" }
