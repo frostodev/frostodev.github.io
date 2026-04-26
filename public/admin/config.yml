@@ -2,7 +2,7 @@ backend:
   name: github
   repo: frostodev/frostodev.github.io
   branch: main
-  base_url: https://decap-oauth-proxy.sergio-carcamo2023.workers.dev/
+  base_url: https://decap-oauth-proxy.sergio-carcamo2023.workers.dev
 
 local_backend: true
 
